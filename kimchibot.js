@@ -8,10 +8,8 @@ const GROUP_ID = process.env.GROUP_ID;
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
 // Forward messages from the Channel to the Group
-bot.on('message', (msg) => {
-    if (msg.chat.type === "channel") {
-        bot.sendMessage(GROUP_ID, `📢 ${msg.text}`);
-    }
+bot.on('channel_post', (msg) => {
+    bot.sendMessage(GROUP_ID, `📢 ${msg.text}`);
 });
 
 // Auto-reply when users type /kimchi
