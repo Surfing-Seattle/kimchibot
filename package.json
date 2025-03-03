@@ -4,7 +4,7 @@
   "main": "kimchibot.js",
   "scripts": {
     "start": "node kimchibot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,9 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "node-telegram-bot-api": "^0.66.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "sinon": "^17.0.1"
   }
 }
